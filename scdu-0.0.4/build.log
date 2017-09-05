@@ -1,0 +1,290 @@
+BUILD LOG STARTED      Tue Sep  5 17:16:44 UTC 2017
+
+===============================================================================
+build all              scdu-0.0.4: windows:mingw64_nt-6.1
+===============================================================================
+
+archs                  amd64 i386
+modes                  release debug
+
+===============================================================================
+build clean            scdu-0.0.4: machine-generated files
+===============================================================================
+
+cleaning               bld
+cleaning               pkg
+cleaning               tmp
+
+===============================================================================
+build sanitise         scdu-0.0.4: human-generated files
+===============================================================================
+
+sanitising             .
+sanitising             src/app
+sanitising             src/core
+sanitising             src/ffs
+sanitising             src/alg
+sanitising             src/doc
+
+===============================================================================
+build core             scdu-0.0.4: windows-amd64-release
+===============================================================================
+
+compiling              bld/core/windows/amd64/release/obj/channels.o
+compiling              bld/core/windows/amd64/release/obj/cmd.o
+compiling              bld/core/windows/amd64/release/obj/error.o
+compiling              bld/core/windows/amd64/release/obj/format.o
+compiling              bld/core/windows/amd64/release/obj/math.o
+compiling              bld/core/windows/amd64/release/obj/mem.o
+compiling              bld/core/windows/amd64/release/obj/parse.o
+compiling              bld/core/windows/amd64/release/obj/platform.o
+compiling              bld/core/windows/amd64/release/obj/quantity.o
+compiling              bld/core/windows/amd64/release/obj/str.o
+compiling              bld/core/windows/amd64/release/obj/type.o
+compiling              bld/core/windows/amd64/release/obj/value.o
+compiling              bld/core/windows/amd64/release/obj/var.o
+archiving              bld/core/windows/amd64/release/lib/libcore.a
+
+===============================================================================
+build ffs              scdu-0.0.4: windows-amd64-release
+===============================================================================
+
+compiling              bld/ffs/windows/amd64/release/obj/file.o
+archiving              bld/ffs/windows/amd64/release/lib/libffs.a
+
+===============================================================================
+build alg              scdu-0.0.4: windows-amd64-release
+===============================================================================
+
+compiling              bld/alg/windows/amd64/release/obj/match.o
+archiving              bld/alg/windows/amd64/release/lib/libpat.a
+
+===============================================================================
+build app              scdu-0.0.4: windows-amd64-release
+===============================================================================
+
+compiling              bld/app/windows/amd64/release/obj/copy.o
+compiling              bld/app/windows/amd64/release/obj/help.o
+compiling              bld/app/windows/amd64/release/obj/info.o
+compiling              bld/app/windows/amd64/release/obj/main.o
+compiling              bld/app/windows/amd64/release/obj/show.o
+compiling              bld/app/windows/amd64/release/obj/view.o
+linking                bld/app/windows/amd64/release/bin/scdu.exe
+
+===============================================================================
+build pkb              scdu-0.0.4: windows-amd64-release
+===============================================================================
+
+packing                pkg/scdu-0.0.4-bin-windows-amd64-release.tar.gz
+
+===============================================================================
+build core             scdu-0.0.4: windows-amd64-debug
+===============================================================================
+
+compiling              bld/core/windows/amd64/debug/obj/channels.o
+compiling              bld/core/windows/amd64/debug/obj/cmd.o
+compiling              bld/core/windows/amd64/debug/obj/error.o
+compiling              bld/core/windows/amd64/debug/obj/format.o
+compiling              bld/core/windows/amd64/debug/obj/math.o
+compiling              bld/core/windows/amd64/debug/obj/mem.o
+compiling              bld/core/windows/amd64/debug/obj/parse.o
+compiling              bld/core/windows/amd64/debug/obj/platform.o
+compiling              bld/core/windows/amd64/debug/obj/quantity.o
+compiling              bld/core/windows/amd64/debug/obj/str.o
+compiling              bld/core/windows/amd64/debug/obj/type.o
+compiling              bld/core/windows/amd64/debug/obj/value.o
+compiling              bld/core/windows/amd64/debug/obj/var.o
+archiving              bld/core/windows/amd64/debug/lib/libcore.a
+
+===============================================================================
+build ffs              scdu-0.0.4: windows-amd64-debug
+===============================================================================
+
+compiling              bld/ffs/windows/amd64/debug/obj/file.o
+archiving              bld/ffs/windows/amd64/debug/lib/libffs.a
+
+===============================================================================
+build alg              scdu-0.0.4: windows-amd64-debug
+===============================================================================
+
+compiling              bld/alg/windows/amd64/debug/obj/match.o
+archiving              bld/alg/windows/amd64/debug/lib/libpat.a
+
+===============================================================================
+build app              scdu-0.0.4: windows-amd64-debug
+===============================================================================
+
+compiling              bld/app/windows/amd64/debug/obj/copy.o
+compiling              bld/app/windows/amd64/debug/obj/help.o
+compiling              bld/app/windows/amd64/debug/obj/info.o
+compiling              bld/app/windows/amd64/debug/obj/main.o
+compiling              bld/app/windows/amd64/debug/obj/show.o
+compiling              bld/app/windows/amd64/debug/obj/view.o
+linking                bld/app/windows/amd64/debug/bin/scdu.exe
+
+===============================================================================
+build pkb              scdu-0.0.4: windows-amd64-debug
+===============================================================================
+
+packing                pkg/scdu-0.0.4-bin-windows-amd64-debug.tar.gz
+
+===============================================================================
+build core             scdu-0.0.4: windows-i386-release
+===============================================================================
+
+compiling              bld/core/windows/i386/release/obj/channels.o
+compiling              bld/core/windows/i386/release/obj/cmd.o
+compiling              bld/core/windows/i386/release/obj/error.o
+compiling              bld/core/windows/i386/release/obj/format.o
+compiling              bld/core/windows/i386/release/obj/math.o
+compiling              bld/core/windows/i386/release/obj/mem.o
+compiling              bld/core/windows/i386/release/obj/parse.o
+compiling              bld/core/windows/i386/release/obj/platform.o
+compiling              bld/core/windows/i386/release/obj/quantity.o
+compiling              bld/core/windows/i386/release/obj/str.o
+compiling              bld/core/windows/i386/release/obj/type.o
+compiling              bld/core/windows/i386/release/obj/value.o
+compiling              bld/core/windows/i386/release/obj/var.o
+archiving              bld/core/windows/i386/release/lib/libcore.a
+
+===============================================================================
+build ffs              scdu-0.0.4: windows-i386-release
+===============================================================================
+
+compiling              bld/ffs/windows/i386/release/obj/file.o
+archiving              bld/ffs/windows/i386/release/lib/libffs.a
+
+===============================================================================
+build alg              scdu-0.0.4: windows-i386-release
+===============================================================================
+
+compiling              bld/alg/windows/i386/release/obj/match.o
+archiving              bld/alg/windows/i386/release/lib/libpat.a
+
+===============================================================================
+build app              scdu-0.0.4: windows-i386-release
+===============================================================================
+
+compiling              bld/app/windows/i386/release/obj/copy.o
+compiling              bld/app/windows/i386/release/obj/help.o
+compiling              bld/app/windows/i386/release/obj/info.o
+compiling              bld/app/windows/i386/release/obj/main.o
+compiling              bld/app/windows/i386/release/obj/show.o
+compiling              bld/app/windows/i386/release/obj/view.o
+linking                bld/app/windows/i386/release/bin/scdu.exe
+
+===============================================================================
+build pkb              scdu-0.0.4: windows-i386-release
+===============================================================================
+
+packing                pkg/scdu-0.0.4-bin-windows-i386-release.tar.gz
+
+===============================================================================
+build core             scdu-0.0.4: windows-i386-debug
+===============================================================================
+
+compiling              bld/core/windows/i386/debug/obj/channels.o
+compiling              bld/core/windows/i386/debug/obj/cmd.o
+compiling              bld/core/windows/i386/debug/obj/error.o
+compiling              bld/core/windows/i386/debug/obj/format.o
+compiling              bld/core/windows/i386/debug/obj/math.o
+compiling              bld/core/windows/i386/debug/obj/mem.o
+compiling              bld/core/windows/i386/debug/obj/parse.o
+compiling              bld/core/windows/i386/debug/obj/platform.o
+compiling              bld/core/windows/i386/debug/obj/quantity.o
+compiling              bld/core/windows/i386/debug/obj/str.o
+compiling              bld/core/windows/i386/debug/obj/type.o
+compiling              bld/core/windows/i386/debug/obj/value.o
+compiling              bld/core/windows/i386/debug/obj/var.o
+archiving              bld/core/windows/i386/debug/lib/libcore.a
+
+===============================================================================
+build ffs              scdu-0.0.4: windows-i386-debug
+===============================================================================
+
+compiling              bld/ffs/windows/i386/debug/obj/file.o
+archiving              bld/ffs/windows/i386/debug/lib/libffs.a
+
+===============================================================================
+build alg              scdu-0.0.4: windows-i386-debug
+===============================================================================
+
+compiling              bld/alg/windows/i386/debug/obj/match.o
+archiving              bld/alg/windows/i386/debug/lib/libpat.a
+
+===============================================================================
+build app              scdu-0.0.4: windows-i386-debug
+===============================================================================
+
+compiling              bld/app/windows/i386/debug/obj/copy.o
+compiling              bld/app/windows/i386/debug/obj/help.o
+compiling              bld/app/windows/i386/debug/obj/info.o
+compiling              bld/app/windows/i386/debug/obj/main.o
+compiling              bld/app/windows/i386/debug/obj/show.o
+compiling              bld/app/windows/i386/debug/obj/view.o
+linking                bld/app/windows/i386/debug/bin/scdu.exe
+
+===============================================================================
+build pkb              scdu-0.0.4: windows-i386-debug
+===============================================================================
+
+packing                pkg/scdu-0.0.4-bin-windows-i386-debug.tar.gz
+
+===============================================================================
+build doc              scdu-0.0.4: windows-amd64-release
+===============================================================================
+
+generating             bld/doc/scdu-user-guide.txt
+generating             bld/doc/scdu-user-guide.html
+generating             bld/doc/scdu-user-guide.man
+generating             bld/doc/scdu-dev-guide.txt
+generating             bld/doc/scdu-dev-guide.html
+generating             bld/doc/scdu-dev-guide.man
+
+===============================================================================
+build pkd              scdu-0.0.4: windows-amd64-release
+===============================================================================
+
+packing                pkg/scdu-0.0.4-doc.tar.gz
+
+===============================================================================
+build pks              scdu-0.0.4: source files and development resources
+===============================================================================
+
+packing                pkg/scdu-0.0.4-src.tar.gz
+
+===============================================================================
+build summary
+===============================================================================
+
+scdu version           0.0.4
+build date/time        2017-09-05T18:16:44+01:00
+
+bash                   find (GNU findutils) 4.6.0
+coreutils              cp (GNU coreutils) 8.25
+findutils              find (GNU findutils) 4.6.0
+grep                   grep (GNU grep) 2.22
+sed                    sed (GNU sed) 4.2.2
+awk                    GNU Awk 4.1.4, API: 1.1 (GNU MPFR 3.1.4, GNU MP 6.1.0)
+groff                  GNU groff version 1.22.3
+gcc                    g++.exe (Rev2, Built by MSYS2 project) 6.2.0
+pandoc                 pandoc.exe 1.17.2
+make                   GNU Make 4.2.1
+binutils               GNU ar (GNU Binutils) 2.27
+
+os                     windows
+os archs               amd64 i386
+os modes               release debug
+
+host                   mingw64_nt-6.1
+host archs             amd64 i386
+host modes             release debug
+
+archs completed        2/2 windows archs
+modes completed        2/2 windows modes
+
+===============================================================================
+build all              done
+===============================================================================
+
+BUILD LOG COMPLETED    Tue Sep  5 17:17:57 UTC 2017

@@ -1,0 +1,115 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+NOTE: THIS DOCUMENTATION IS INCOMPLETE 
+
+## Introduction
+
+SCDU is a portable data utility. Although written in C++, it avoids the more
+complex C++ features and is strongly oriented towards traditional C in POSIX
+environments.
+
+There are a number of reasons for this approach:
+
+* Performance
+* Reliability
+* Code size
+* Cross-platform support
+
+### IDE
+
+While there is nothing to stop the programmer from using his favourite IDE
+during development, this project is IDE-agnostic for the following reasons:
+
+    * Build consistency
+    * Build automation 
+    * Programmer visibility
+
+This project can easily be maintained using a good programming editor such as
+Sublime Text or Vim. While there is scope for integrating modern IDE features
+into these editors (e.g. code completion and low-level debugging), eschewing
+these features can often result in better code quality by encouraging the
+programmer to think about what he is doing instead of adopting a more frenzied,
+trial-and-error approach. 
+
+
+### Project Directories
+
+Sub-directories are employed liberally to assist visibility and avoid clutter,
+especially in the root directory:
+
+Directory Description
+--------- -------------------------------------------
+cmd/      development automation scripts
+src/      source code
+bld/      targets
+tmp/      temporary files 
+run/      run-time working directory
+--------- -------------------------------------------
+
+### Project Builds
+
+The makefile supports incremental builds using GNU Make. The make process is
+fully automated i.e. there is no need to modify the makefile internals as the
+project evolves.
+
+The makefile assumes that all CPP files in the src directory are to be
+compiled. If you wish to temporarily remove a file from the project, change
+its extension to something like .cXX.
+
+The build script places the appropriate GCC compiler and MSYS directories in
+its shell path before performing a project make. The intention is that this
+script can be extended to build binaries for all target platforms. 
+
+The following options are currently supported via the build script:
+    
+    * build             (incremental build)
+    * build run         (incremental build and run)
+    * build all         (complete re-build)
+
+These build options can be incorporated into your editor menu and keyboard
+shortcuts.
+
+Note: Manually compiling individual source files outside of the designated
+build/make process is to be avoided. Incremental project builds offer fast
+design iterations and build consistency while encouraging the programmer to
+introduce new functionality in a gradual and more controlled fashion. With
+this approach, code quality is less likely to degrade as the project evolves.
+
+### Build Configurations
+
+To generate the appropriate binary, set the following makefile variables:
+
+    * BLD_MODE = DEBUG | RELEASE
+    * BLD_ARCH = 386 | AMD64
+    * BLD_OS = WINDOWS | LINUX | DARWIN
+
+Note: LINUX and DARWIN support is coming soon!
+
+### Testing
+
+When testing your code, you can modify the scdu.bat script in the tst directory
+to run the program executable with appropriate command-line arguments.
+
+### Documentation
+
+Project documentation is maintained using simplified markdown (.md) files.
+One markdown file is associated with each module and a project markdown file
+(this one) offers a project overview. Markdown files are normal text files
+with simple conventions which assist readability while facilitating conversion
+to other more user-friendly formats, e.g. HTML.
+
+### Naming Conventions
+
+The following are general naming guidelines:
+
+| Entity                                  | Examples                        |
+|:----------------------------------------|:--------------------------------|
+| Module                                  | mymod.h; mymod.cpp              |
+| Class or Type                           | MyClass; MyType                 | 
+| Class Member (Private/Protected)        | mMyMember                       | 
+| Class Member (Public)                   | myMember                        | 
+| Class Method                            | myMethod()                      | 
+| Struct or Union Field                   | myField                         | 
+| Function or Global Variable             | myFunction(); myVariable        | 
+| Function Argument or Local Variable     | my_var                          |

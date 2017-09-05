@@ -1,0 +1,11 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## To Do
+
+* Complete documentation generation
+* Look at namespaces issue re. external libs
+* Add NET library skeleton
+* Add X route to channels for IPC
+* Add thread support to core lib
+* Implement BP Algorithm as showcase for thread support

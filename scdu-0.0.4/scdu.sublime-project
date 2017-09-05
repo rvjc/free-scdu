@@ -1,0 +1,92 @@
+{
+	"build_systems":
+	[
+		{	
+			"env":
+			{
+				"MSYSTEM": "MINGW64",
+
+				"SCDU_SET_COLS": "",
+				"SCDU_SET_PROMPT": "",
+				"SCDU_SET_SMAKE": "1",
+            	"SCDU_SET_KMAKE": "1",
+            	"SCDU_SET_RUNSH": "",
+            	"SCDU_SET_ARCH": "",
+            	"SCDU_SET_MODE": "debug"
+            },
+
+            "path": "c:/msys64/usr/bin",
+
+            "name": "SCDU Build",
+			"shell_cmd": "sh build.sh",
+			
+			"variants":
+			[
+				{
+					"name": "run",					
+					"shell_cmd": "sh build.sh app run"
+				},
+
+				{
+					"name": "view",					
+					"shell_cmd": "sh build.sh dgh view"
+				},
+
+				{
+					"name": "doc",					
+					"shell_cmd": "sh build.sh dgt"
+				},
+
+				{
+					"name": "pack",					
+					"shell_cmd": "sh build.sh pkb"
+				},
+
+				{
+					"name": "libs",
+					"shell_cmd": "sh build.sh libs"
+				},
+
+				{
+					"name": "clean",					
+					"shell_cmd": "sh build.sh clean"
+				},
+
+				{
+					"name": "sanitise",					
+					"shell_cmd": "sh build.sh sanitise"
+				},
+
+				{
+					"name": "check",					
+					"shell_cmd": "sh build.sh app check"
+				},
+
+				{
+					"name": "all",
+					"shell_cmd": "sh build.sh all"
+				}
+			],
+
+			"working_dir": "$project_path",
+            "file_regex": "^[.\\\\/]*([a-z]?:?[\\w.\\\\/]+)[(:]([0-9]+)[):]([0-9]+)?:?(.*)$",
+		}
+	],
+
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["bld", "pkg", "tmp"]
+		}
+	],
+
+	"settings":
+	{
+		"default_line_ending": "unix",
+		"tab_size": 4,
+		"translate_tabs_to_spaces": true,
+    	"use_tab_stops": true,
+    	"rulers": [80]
+	}
+}

@@ -1,0 +1,7 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Changes
+
+0.0.1: first release with version control
+0.0.2: pack now generates checksum

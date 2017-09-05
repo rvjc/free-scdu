@@ -1,0 +1,683 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "bugs.txt",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build.log",
+			"settings":
+			{
+				"buffer_size": 14498,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "SCDU Build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"SCDU Build",
+					""
+				],
+				[
+					"SCDU Build",
+					"run"
+				],
+				[
+					"SCDU Build",
+					"view"
+				],
+				[
+					"SCDU Build",
+					"doc"
+				],
+				[
+					"SCDU Build",
+					"pack"
+				],
+				[
+					"SCDU Build",
+					"libs"
+				],
+				[
+					"SCDU Build",
+					"clean"
+				],
+				[
+					"SCDU Build",
+					"sanitise"
+				],
+				[
+					"SCDU Build",
+					"check"
+				],
+				[
+					"SCDU Build",
+					"all"
+				]
+			],
+			[
+				"SCDU Build",
+				"all"
+			]
+		]
+	],
+	"build_varint": "all",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"build",
+				"Build With: Project - run"
+			],
+			[
+				"b",
+				"Build With: scdu - all"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 252.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/P/shane/scdu-0.0.4",
+		"/P/shane/scdu-0.0.4/src"
+	],
+	"file_history":
+	[
+		"/P/shane/scdu-0.0.4/project.txt",
+		"/P/shane/scdu-0.0.4/cmd/build.sh",
+		"/P/shane/scdu-0.0.4/build.sh",
+		"/P/shane/scdu-0.0.4/build.log",
+		"/P/shane/scdu-0.0.4/old-build.sh",
+		"/P/shane/scdu-0.0.4/license.txt",
+		"/P/shane/scdu-0.0.4/src/app/main.cpp",
+		"/P/shane/scdu-0.0.4/src/core/markdown.h",
+		"/C/Users/Vincent/Desktop/em65/time.go",
+		"/P/shane/scdu-0.0.4/src/core/channels.h",
+		"/P/shane/scdu-0.0.4/src/core/channels.cpp",
+		"/P/shane/scdu-0.0.4/src/core/str.h",
+		"/P/shane/scdu-0.0.4/src/core/core.h",
+		"/P/shane/scdu-0.0.4/src/core/markdown.txt",
+		"/P/shane/scdu-0.0.4/src/core/mark.h",
+		"/P/shane/scdu-0.0.4/src/core/mark.cpp",
+		"/P/shane/scdu-0.0.4/src/core/mark.txt",
+		"/P/shane/scdu-0.0.4/src/app/help.cpp",
+		"/P/shane/scdu-0.0.4/src/core/platform.h",
+		"/P/shane/scdu-0.0.4/scdu.sublime-project",
+		"/P/shane/scdu-0.0.4/src/app/show.cpp",
+		"/P/shane/scdu-0.0.4/src/app/view.cpp",
+		"/P/shane/scdu-0.0.4/src/app/copy.cpp",
+		"/C/xmingw64/x86_64-w64-mingw32/include/stdarg.h",
+		"/C/xMinGW-4.8.1/include/varargs.h",
+		"/C/Users/Vincent/Downloads/go-master/PATENTS",
+		"/P/shane/scdu-0.0.4/build.txt",
+		"/P/shane/scdu-0.0.4/bld/doc/scdu-dev-guide.txt",
+		"/P/shane/scdu-0.0.4/src/core/format.h",
+		"/P/shane/scdu-0.0.4/src/doc/doc.css",
+		"/P/shane/scdu-0.0.4/src/doc/doc.txt",
+		"/P/shane/scdu-0.0.4/src/ffs/file.txt",
+		"/P/shane/scdu-0.0.4/src/core/quantity.txt",
+		"/P/shane/scdu-0.0.4/src/core/str.txt",
+		"/P/shane/scdu-0.0.4/src/core/type.txt",
+		"/P/shane/scdu-0.0.4/src/core/value.txt",
+		"/P/shane/scdu-0.0.4/src/core/var.txt",
+		"/P/shane/scdu-0.0.4/src/core/format.txt",
+		"/P/shane/scdu-0.0.4/src/core/math.txt",
+		"/P/shane/scdu-0.0.4/src/core/mem.txt",
+		"/P/shane/scdu-0.0.4/src/core/parse.txt",
+		"/P/shane/scdu-0.0.4/src/core/platform.txt",
+		"/P/shane/scdu-0.0.4/src/core/core.txt",
+		"/P/shane/scdu-0.0.4/src/core/error.txt",
+		"/P/shane/scdu-0.0.4/src/core/cmd.txt",
+		"/P/shane/scdu-0.0.4/src/core/channels.txt",
+		"/P/shane/scdu-0.0.4/src/app/copy.txt",
+		"/P/shane/scdu-0.0.4/src/app/help.txt",
+		"/P/shane/scdu-0.0.4/src/app/info.txt",
+		"/P/shane/scdu-0.0.4/src/app/main.txt",
+		"/P/shane/scdu-0.0.4/src/app/show.txt",
+		"/P/shane/scdu-0.0.4/src/app/view.txt",
+		"/P/shane/scdu-0.0.4/src/alg/match.txt",
+		"/P/shane/scdu-0.0.4/changes.txt",
+		"/P/shane/scdu-0.0.4/bugs.txt",
+		"/P/shane/scdu-0.0.4/todo.txt",
+		"/P/shane/scdu-0.0.4/run/run.sh",
+		"/P/shane/scdu-0.0.4/roadmap.txt",
+		"/P/shane/scdu-0.0.4/wishlist.txt",
+		"/P/shane/scdu-0.0.4/src/core/cmd.cpp",
+		"/P/shane/scdu-0.0.4/src/app/show.h",
+		"/P/shane/scdu-0.0.4/src/core/cmd.h",
+		"/P/shane/scdu-0.0.4/src/core/platform.cpp",
+		"/P/shane/scdu-0.0.4/bld/doc/scdu-user-guide.txt",
+		"/P/shane/old/recent/scdu - adding build view/cmd/build.sh",
+		"/P/shane/old/recent/run function completed/cmd/build.sh",
+		"/P/shane/scdu-0.0.4/build.mak",
+		"/P/shane/scdu-0.0.4/src/doc/changes.txt",
+		"/P/shane/scdu-0.0.4/src/doc/intro.txt",
+		"/P/shane/scdu-0.0.4/src/doc/wishlist.txt",
+		"/P/shane/scdu-0.0.4/src/ffs/file.cpp",
+		"/P/shane/scdu-0.0.4/src/ffs/file.h",
+		"/P/shane/scdu-0.0.4/src/alg/match.cpp",
+		"/P/shane/scdu-0.0.4/src/alg/match.h",
+		"/P/shane/scdu-0.0.4/src/core/error.cpp",
+		"/P/shane/scdu-0.0.4/src/core/error.h",
+		"/P/shane/scdu-0.0.4/src/core/format.cpp",
+		"/P/shane/scdu-0.0.4/src/core/math.cpp",
+		"/P/shane/scdu-0.0.4/src/core/math.h",
+		"/P/shane/scdu-0.0.4/src/core/mem.cpp",
+		"/P/shane/scdu-0.0.4/src/core/mem.h",
+		"/P/shane/scdu-0.0.4/src/core/parse.cpp",
+		"/P/shane/scdu-0.0.4/src/core/parse.h",
+		"/P/shane/scdu-0.0.4/src/core/quantity.cpp",
+		"/P/shane/scdu-0.0.4/src/core/quantity.h",
+		"/P/shane/scdu-0.0.4/src/core/str.cpp",
+		"/P/shane/scdu-0.0.4/src/core/type.cpp",
+		"/P/shane/scdu-0.0.4/src/core/type.h",
+		"/P/shane/scdu-0.0.4/src/core/value.cpp",
+		"/P/shane/scdu-0.0.4/src/core/value.h",
+		"/P/shane/scdu-0.0.4/src/core/var.cpp",
+		"/P/shane/scdu-0.0.4/src/core/var.h",
+		"/P/shane/scdu-0.0.4/src/app/copy.h",
+		"/P/shane/scdu-0.0.4/src/app/help.h",
+		"/P/shane/scdu-0.0.4/src/app/info.cpp",
+		"/P/shane/scdu-0.0.4/src/app/info.h",
+		"/P/shane/scdu-0.0.4/src/app/view.h",
+		"/C/Users/Vincent/gpl.txt",
+		"/P/shane/scdu-0.0.4/src/core/prog.h",
+		"/P/shane/scdu-0.0.4/tmp/cache/mingw64_nt-6.1-windows-amd64-release.cache",
+		"/P/shane/scdu-0.0.4/src/core/prog.cpp",
+		"/P/shane/scdu-0.0.4/src/app/prog.h",
+		"/P/shane/scdu-0.0.4/test.cfg",
+		"/P/shane/scdu-0.0.4/tmp/sanitise/notws/test.log.notws",
+		"/P/shane/scdu-0.0.4/tmp/sanitise/notws/test.log",
+		"/P/shane/scdu-0.0.4/test.log",
+		"/P/shane/scdu-0.0.4/tmp/cache/mingw64_nt-6.1-windows-amd64-debug.cache",
+		"/P/shane/scdu-0.0.4/tmp/cache/mingw64_nt-6.1-test.cache",
+		"/P/shane/scdu-0.0.4/build-good.sh",
+		"/P/shane/scdu-0.0.4/scdu.mak",
+		"/P/shane/scdu-0.0.4/run/scdu.sh",
+		"/P/shane/scdu-0.0.2/build.sh",
+		"/P/shane/scdu-0.0.2/scdu.sublime-project",
+		"/P/shane/scdu-0.0.2/scdu.mak",
+		"/P/shane/scdu-0.0.2/changes.txt",
+		"/P/shane/scdu-0.0.1/pkg/scdu-0.0.1-src.tar.gz.sha256sum",
+		"/P/shane/scdu-0.0.1/pkg/scdu-0.0.1-bin-windows-amd64-debug.tar.gz.sha256sum",
+		"/P/shane/scdu-0.0.1/scdu.sublime-project",
+		"/P/shane/scdu/cmd/scdu.mak",
+		"/P/shane/scdu/cmd/build.sh",
+		"/P/shane/scdu/bld/doc/txt/scdu-dev-guide.txt",
+		"/P/shane/scdu/src/app/copy.txt",
+		"/P/shane/scdu/src/core/channels.cpp",
+		"/P/shane/scdu/src/core/channels.txt",
+		"/P/shane/scdu/src/app/main.cpp",
+		"/P/shane/scdu/run/scdu.sh",
+		"/P/shane/scdu/src/app/prog.h",
+		"/P/shane/scdu/src/app/help.cpp"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"P:\\shane\\scdu-0.0.4\\src\\app",
+			"P:\\shane\\scdu-0.0.4\\src\\core",
+			"P:\\shane\\scdu-0.0.4\\src\\app",
+			"P:\\shane\\scdu-0.0.4\\src\\core",
+			"P:\\shane\\scdu-0.0.4\\src\\app",
+			"P:\\shane\\scdu-0.0.4\\src\\core",
+			"P:\\shane\\scdu-0.0.2\\bld\\alg",
+			"P:\\shane\\scdu\\src\\app",
+			"P:\\shane\\scdu\\src\\app*.cpp",
+			"P:\\shane\\scdu\\src",
+			"P:\\shane\\scdu\\doc",
+			"P:\\shane\\scdu\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"scdu_ugt",
+			"--",
+			"printf",
+			"myvar",
+			"CH_COUNT",
+			"CN",
+			"struct",
+			"pvI",
+			"WARNING",
+			"INFO",
+			"__builtin_va_start",
+			"logPrint",
+			"dgnPrint",
+			"stdPrint",
+			"logPut",
+			"dgnPut",
+			"stdPut",
+			"scdu_trap_clr",
+			"scdu_trap_set",
+			"cache_var",
+			"scdu_trap_set",
+			"WSH",
+			"while",
+			"k",
+			"GCC_VERSION",
+			"scdu_ter",
+			"scdu_ber",
+			"SCDU_SET_YES",
+			"SCDU_DATE",
+			"YES",
+			"SCDU_PROMPT",
+			"SCDU_YES",
+			"exit",
+			"scdu_mer",
+			"SCDU_RUN_SCR_RPATH",
+			"printf",
+			"build.log",
+			"PROG_",
+			"SCDU_ARCH",
+			"SCDU_OS",
+			"SCDU_MODE",
+			"SCDU_ARCH",
+			"SCDU_OS",
+			"scdu_continue",
+			"make",
+			"trap",
+			"trap scdu_ter ERR",
+			"trap - ERR",
+			"trap",
+			"make",
+			"unconfigured",
+			"scdu.sh",
+			"scdu.mak",
+			"SCDU_APP_BLD",
+			"pushd",
+			"awk",
+			"NR",
+			"SCDU_ADIR",
+			"SCDU",
+			"SCDU_BUTL_",
+			"SCDU_MAKE_",
+			"SCDU_FIU_",
+			"SCDU_FUTL_",
+			"SCDU_CUTL_",
+			"SCDU_GROF_",
+			"SCDU_GREP_",
+			"SCDU_BASH_",
+			"-rs",
+			"-rs=R",
+			"SCDU_AR_",
+			"m",
+			"SCDU_GPP",
+			"g++",
+			"SCDU_BLD_DOC",
+			"SCDU_BLD_ALG",
+			"SCDU_BLD_FFS",
+			"SCDU_BLD_COR",
+			"SCDU_BLD_APP",
+			" SCDU_APP_SRC",
+			"SCDU_SRC_DOC",
+			"SCDU_SRC_ALG",
+			"SCDU_SRC_FFS",
+			"SCDU_SRC_COR",
+			"SCDU_SRC_APP",
+			"SCDU_GCC_VERSION",
+			"SCDU_GCC_ADIR",
+			"SCDU_ADIR",
+			"SCDU_PRJ",
+			"SCDU_PRJ_ADIR",
+			"SCDU_RUN_SCR",
+			"SCDU_DEF_ARCH",
+			"make",
+			"SCDU_BUILD_SCR",
+			"SCDU_RUN_SCR",
+			"SCDU_BASH",
+			"SCDU_SHELL",
+			"SCDU_MAKE_CMD",
+			"$SCDU_MAKE_FILE",
+			"SCDU_MAKE_FILE",
+			"SCDU_PATH",
+			"SCDU_PATH_ENV",
+			"SCDU_PAN_APATH",
+			"SCDU_AR_APATH",
+			"SCDU_GCC_APATH",
+			"SCDU_MAKE_FILE",
+			"SCDU_MAKE_APATH",
+			"SCDU_BASH_ADIR",
+			"SCDU_BASH_APATH",
+			"SCDU_BASH_ADIR",
+			"SCDU_BASH_APATH",
+			"SCDU_SHELL_ADIR",
+			"SCDU_SHELL_APATH",
+			"SCDU_SHELL_CMD",
+			"SCDU_SHELL_ADIR",
+			"SCDU_SHELL_CMD",
+			"SCDU_SHELL_VERSION",
+			"SCDU_NS",
+			"SCDU_NLS",
+			"SCDU_NS",
+			"SCDU_NLS",
+			"type",
+			"awk",
+			"sed",
+			"grep",
+			"SCDU_SHELL_APATH",
+			"SHELL",
+			"SCDU_MAKE",
+			"echo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"CN_COUNT",
+			"ERROR",
+			"WARNING",
+			"logPutv",
+			"dgnPutv",
+			"stdPutv",
+			"logPuts",
+			"dgnPuts",
+			"stdPuts",
+			"cache_put",
+			"scdu_trap",
+			"scdu_err",
+			"SCDU_DATETIME",
+			"SCDU_PROMPT",
+			"SCDU_",
+			"run.sh",
+			"build.mak",
+			"SCDU_PRJ_ADIR",
+			"SCDU_BNU_",
+			"SCDU_MAK_",
+			"SCDU_FDU_",
+			"SCDU_FIU_",
+			"SCDU_CRU_",
+			"SCDU_GRF_",
+			"SCDU_GRP_",
+			"SCDU_BSH_",
+			"SCDU_BUTL_",
+			"SCDU_GCC",
+			"SCDU_DOC_BLD",
+			"SCDU_ALG_BLD",
+			"SCDU_FFS_BLD",
+			"SCDU_COR_BLD",
+			"SCDU_APP_BLD",
+			"SCDU_DOC_SRC",
+			"SCDU_ALG_SRC",
+			"SCDU_FFS_SRC",
+			"SCDU_COR_SRC",
+			"SCDU_APP_SRC",
+			"SCDU_GPP_VERSION",
+			"SCDU_GPP_ADIR",
+			"SCDU",
+			"SCDU_ADIR",
+			"make -f scdu.mak",
+			"scdu.mak",
+			"SCDU_PATH",
+			"SCDU_BASH_ADIR",
+			"SCDU_BASH_APATH",
+			"SCDU_NS",
+			"SCDU_MAKE_CMD",
+			"LIBS",
+			"PKD",
+			"PKS",
+			"PKB",
+			"mak",
+			"cfg",
+			"css",
+			"txt",
+			"h",
+			"cpp",
+			"sh",
+			"mak",
+			"SCDU_VERSION",
+			"scdu_bug",
+			"scdu_err",
+			"scdu_eok",
+			"scdu_exc",
+			"scdu_bug",
+			"scdu_err",
+			"scdu_eok",
+			"scdu_exc",
+			"_FFS_",
+			"_FSY_",
+			"_FSY",
+			"SCDU_LFLAGS",
+			"SCDU_CFLAGS",
+			"stdNewline",
+			"logNewline",
+			"dgnNewline",
+			"logPut(logNewLine)",
+			"dgnPut(dgnNewLine)",
+			"stdPut(stdNewLine)",
+			"PANIC",
+			"panic",
+			"_APATH",
+			"_ADIR",
+			"SCDU_PATH_ENV",
+			"SCDU_HOST_MODES",
+			"SCDU_HOST_ARCHS",
+			"SCDU_ENV_PATH",
+			"maxv",
+			"absv",
+			"BLD_LFLAGS",
+			"BLD_CFLAGS",
+			"BLD_HOST",
+			"PRJ",
+			"BLD_M64",
+			"BLD_M32",
+			"#if !defined",
+			"software is governed",
+			"code is governed"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "bugs.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "build.log",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 14498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GoSublime-main-output":
+	{
+		"height": 118.0
+	},
+	"output.exec":
+	{
+		"height": 259.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "SCDU Build",
+	"project": "scdu.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 247.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
