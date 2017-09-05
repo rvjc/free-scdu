@@ -1,0 +1,79 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Cmd Module
+
+cmd.h cmd.cpp
+
+Note: this is a core module (see core documentation).
+
+The Cmd class holds user settings and environment variables for the current
+execution cycle.
+
+User settings consist of the current action, options and parameters. All of
+these have consisent defaults which may be over-ridden via the command-line.
+Options can also be specified in a configuration file using the -cf option.
+
+The init() method parses the command-line and config file (if specified) to
+establish all environment variables and user settings for the current cycle. 
+
+The global cmd object is a special instance of the Cmd class exposed to the
+remaining the code base. Since this object is accessed extensively, it is
+declared as a const for added safety. To satisfy const correctness rules when
+calling the init() method, certain data members are declared as mutable.
+However, once the init() method gas been called successfully, all settings are
+effectively locked.
+
+### Options
+
+Options can be specified using short symbols prefixed with a single minus (-)
+or longer names prefixed with a double minus (--). Short options are more suited
+to the command-line where space is at a premium while the more descriptive long
+option is more suited to a config file.
+
+### Multi-Options
+
+Single character short-option symbols are reserved for the most ubiquitous flag
+options which may also be combined in compact groups by prefixing with a plus(+)
+e.g. +rfa 
+
+### Config File
+
+All options (apart from -cf) may be specified in a config file. Global options
+at the top of the file represent the default for all actions which may be
+over-ridden in action-specific sections preceded by @<action> declarations.
+Comments lines may be included in the standard way using a leading # character.
+Leading and trailing whitespace on each line is ignored, so indents may be
+used to assist readability. 
+
+For increased versatility, the same option may be specified more than once on
+the command-line or config file. When this happens, the following sequence is
+respected when values are over-ridden:
+
+    1. options specified on the command-line BEFORE the -cf option
+    2. options specified in the global section of the config file
+    3. options specified in the action-specific section of the config file
+    4. options specified on the command-line AFTER the -cf option
+
+Sample config file:
+
+`
+    # scdu.cfg
+    # config file by Shane Callanan
+
+    # global options
+
+    --progress-rate=0.5
+
+    # action-specific options
+
+    @copy
+
+    --route-std=CA
+    --route-dgn=P
+    --progress-rate=0.5
+
+    @help
+
+    --route-std=R
+`

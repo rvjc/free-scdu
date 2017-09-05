@@ -1,0 +1,23 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## File Module
+
+file.h file.cpp
+
+Application-optimised file classes
+
+### FileBuffer 
+
+A FileBuffer is an abstract class with the following concrete implementations
+for reading and writing files:
+
+    * FileReader
+    * FileWriter
+
+A FileBuffer is analogous to a standard file stream. However, it's design is
+optimised for intensive operations on very large files e.g. compression and
+decompression. A custom class also allows scope for future enhancements,
+especially for overcoming platform and file system related quirks. While
+standard file streams offer a certain amount of buffer control, this is not
+always sufficient for our purposes.

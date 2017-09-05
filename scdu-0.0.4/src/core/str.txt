@@ -1,0 +1,28 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Str Module
+
+str.h str.cpp
+
+Note: this is a core module (see core documentation).
+
+### Str Class
+
+This is a simple string class which uses a fixed internal buffer for small
+strings and the heap for larger strings. Unlike the standard string class,
+it uses malloc/realloc/free instead of new/delete therby avoiding exceptions
+and introducing new efficiencies through the use of realloc().
+
+Traditional C strings are still preferred, especially for local variables.
+The Str class is handy in the following scenarios:
+
+    * The string size is unknown and/or potentially very large
+    * The string is global (or part of a global data structure/class)
+
+### Z Functions
+
+Functions with a "z" suffix are variants of standard library string functions
+which will always null terminate the target string even when the size limit is
+reached. It is assumed that the target buffer can hold at least one character
+more than the size argument.

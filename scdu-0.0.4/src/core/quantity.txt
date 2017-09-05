@@ -1,0 +1,11 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Quantity Module
+
+quantity.h quantity.cpp
+
+Note: this is a core module (see core documentation).
+
+This module provides the basis for automating the parsing and formatting of
+numeric quantities.

@@ -1,0 +1,8 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Copy Module
+
+copy.h copy.cpp
+
+Copy action implementation.

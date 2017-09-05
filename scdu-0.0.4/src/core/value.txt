@@ -1,0 +1,11 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Value Module
+
+value.h value.cpp
+
+Note: this is a core module (see core documentation).
+
+This module implements a general-purpose value class with useful automation
+features.

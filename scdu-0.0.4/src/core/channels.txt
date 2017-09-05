@@ -1,0 +1,120 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Channels Module
+
+Program output is directed using the `out..()` family of functions provided by
+this module.
+
+### Source Files
+
+    channels.h
+    channels.cpp
+
+### Interface
+
+This is a core module.
+
+    #include "core.h"
+
+### Channels
+
+As a command-line utility, `scdu` can be run directly from a console or indirectly
+under the control of a higher level script, shell utility or desktop application.
+
+The command syntax, exit codes and signal handling already present a reliable
+API to upstream applications; however a flexible mechanism for controlling
+program output is also desirable.
+
+To address this need, program output is routed via pre-defined channels using
+simple letter designations which are also the suffixes of the corresponding
+`out..()` functions:
+
+    CHANNEL     | FUNCTION | DESCRIPTION                                 
+    ------------|----------|-------------------------------------------
+    C: Command  | outC()   | generate program preamble and postamble
+    S: Summary  | outS()   | summarise program execution stats     
+                |          |
+    A: Action   | outA()   | indicate that current action has started
+    R: Result   | outR()   | generate action results    
+    P: Progress | outP()   | track potentially long-running action
+                |          |                                             
+    I: Info     | outI()   | log info
+    W: Warning  | outW()   | log warnings
+    E: Error    | outE()   | log errors
+                |          |                                             
+    V: Verbose  | outV()   | log extra info that is occasionally useful
+    D: Debug    | outD()   | log extra info to assist debugging          
+    T: Test     | outT()   | log temporary info during testing              
+
+### Output Streams
+
+Currently, `scdu` supports three output streams based on common usage. Channels
+can be individually routed to zero or more of these output streams using the
+following command-line options:
+
+    Option  Default Stream  Meaning     Typical OS Equivalent
+    ------- ------- ------- ----------- --------------------------------------
+    -rs     R       std     standard    stdout (usually line buffered)
+    -rd     *-R     dgn     diagnostic  stderr (usually unbuffered)
+    -rl     *       log     log file    see `-lf -lm` options
+
+Note that it is possible to route any given channel to more than one output
+stream simultaneously. By default, only the R channel is routed to `std` while
+all other channels are routed to `dgn`. While *all* channels are routed to `log`
+by default, this stream is normally disabled.
+
+### Debugging and Testing
+
+Calls to `outD()` are intended to remain in the code base permanently. So they
+should be employed sparingly and intelligently to facilitate verification
+testing in response to bug reports, etc. Actually, `outD()` is a macro wrapper
+for the underlying `outD_()` function which is compiled out of production code
+to avoid performance degradation.
+
+Conversely, the `outT()` macro is intended for ad-hoc/frenetic test output
+during development and all such calls *must* be removed from the code base
+before performing a release build. Any straggling `outT()` calls in production
+code will generate compile errors.
+
+In production code, the D and T channels can be routed to any output stream
+without complaint, but this will have no effect.
+
+### Flushing Streams
+
+The `std` and `dgn` output streams often share the same destination, typically
+a console. In the absence of effective remedies, this can result in overlapping
+output which has long been the bane of command-line utilities across different
+operating systems. More generally, as virtual consoles and external caching
+in multi-process environments become the order of the day, there is a need to
+incorporate "artifical" catchup delays to ensure that data from one stream has
+been properly flushed before outputting data to another stream which shares the
+same physical destination. Simply emptying the output buffer of the underlying
+process is no guarantee that this will have happened whether the streams are
+directed to a console, file or indeed a printer. At the same time, gratuituous
+delays can have an adverse affect on performance, so some tweaking may be
+desirable for any given deployment.
+
+This capability is provided using the `-fd -ff -fl -fs` command-line options.
+
+Overlapping output is more likely during development when the `std` and `dgn`
+streams are intercepted by the IDE. To address this anomaly, more conservative
+catchup delays are employed in debug builds. For the same reason, finely-tuned
+flush settings are more likely to produce over-lapping output in production
+code when it is run from *within* an IDE.
+
+### Progress Channel
+
+The progress channel is a special channel which can take advantage of the `/r`
+character (return without line feed) to over-write each output line.
+
+The objectives are:
+
+- fit as much progress data in the available line width as possible
+- line truncation should not leave partially populated data columns
+- maintain column width consistency as far as is practicable
+- prioritise columns with most relevant data
+- provide command-line options for controlling truncation and data selection
+
+Additional control of progress channel is provided by the `-pw -ps` command-line
+options.

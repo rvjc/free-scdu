@@ -1,0 +1,32 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Mem Module
+
+mem.h mem.cpp
+
+Note: this is a core module (see core documentation).
+
+### Memory Allocation
+
+The memAlloc(), memRealloc() and memFree() function templates are type-specific
+variants of their generic C counterparts. When used correctly, they can reduce
+the occurence of hard-to-isolate bugs due to unsafe type-casting and memory
+leaks. They also allow internal memory allocations to be tracked.
+
+All of these functions require a memory address "reference" as their first
+argument, i.e. a pointer-to-a-pointer to the relevant type. memRealloc() and
+memFree() also have a size check argument which is compared against the
+previously allocated size to ensure consistency. 
+
+To make it easier to track memory errors, particularly in destructors, each of
+these functions requires the function name, source file and line number of the
+caller. Macro wrappers are defined to automate this process.  
+
+The C++ new and delete operators can throw exceptions which we wish to avoid
+where possible. At the same time, C++ has no equivalent to C's realloc() which
+can produce signifiant performance gains in certain contexts. All the more
+reason to provide more rugged variants of the classic C functions.
+
+As a rule in this project, we avoid C++ templates like the plague. In this case,
+we make a rare exception so that we can support a wide range of types.

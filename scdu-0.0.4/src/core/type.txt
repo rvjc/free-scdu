@@ -1,0 +1,16 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Type Module
+
+type.h type.cpp
+
+Note: this is a core module (see core documentation).
+
+This module implements general-purpose types and classes with useful quality
+control and automation features.
+
+### Pick Class
+
+This class uses bit fields corressponding to lower and upper case letters
+of the standard alphabet. It is useful for encapsulting multiple selections.

@@ -1,0 +1,13 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Core Module
+
+core.h
+
+This module includes the header files of core modules in the correct sequence.
+Including core modules separately will generate a compiler error. When including
+"core.h", always place it at the top of your project includes section. 
+
+The core module also includes any standard library modules required by core
+module header files.

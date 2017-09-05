@@ -1,0 +1,87 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Error Module
+
+error.h error.cpp
+
+Note: this is a core module (see core documentation).
+
+This module provides a simple mechanism for raising and handling general runtime
+errors (as distinct from program bugs) whereby the cause is identified and the
+application can terminate gracefully with an appropriate exit code.
+
+While this project is written in C++, it only uses C libraries as a rule. This
+means we are not forced to structure our code around C++ exception handling
+which has a negative impact in the following areas:
+
+    * program complexity
+    * reliability
+    * performance
+    * code footprint
+    * memory usage
+    * debugging
+
+A simpler error handling mechanism is more suited to a non-interactive single-
+threaded console application. When a general error arises, such as an invalid
+command-line option or a missing file, there is no need to catch an exception
+to facilitate a retry or alternative action -- the program just has to clean
+up and exit.
+
+### General Errors
+
+Use the xer() function to raise general errors and exit gracefully by supplying
+the appropriate error code and parameters (where applicable). Always do code
+coverage tests for new error conditions to ensure correct handling. Be wary of
+error parameters which must obey printf() rules i.e. the correct number of
+parameters must be supplied and they must be of the correct type and in the
+correct sequence. Note that, unlike printf and related functions, xer() cannot
+leverage GCC's compile-time format checking. 
+
+New error codes may be added to the Xen enumeration type in error.h and the
+corresponding xerDefs array in error.cpp.
+
+Note that errors are numbered internally from 0 and above. Externally, they are
+offset by 64 to avoid clashes with OS exit codes.
+
+Exit codes are scarce so use sparingly and only for "global" errors. If a module
+detects multiple errors, it is better to reserve a single exit code which
+accepts a "sub-error" string paramater supplied by the module. The module
+may also employ its own structured error-handling (e.g. the cmd module).
+
+### Panics
+
+Use the custom PANIC() macro for unrecoverable errors. This macro calls the
+panic() function supplying the correct caller function, file and line arguments.
+
+Note that a panic error ends by calling abort() which bypasses normal exit
+handling and will be detected by the OS as a crash.
+
+### Assertions
+
+Use the custom ASSERT() macro for quality assurance during development.
+Assertions are compiled out during release builds.
+
+Use ASSERT_ALWAYS() for occasional assertions which need to be included in
+production code. The canonical use case is when an "unused variable" compiler
+warning appears after the standard assertion is compiled out. But there are also
+times when ASSERT_ALWAYS() will give additional peace-of-mind in complex code
+sections, especially when there is little or no peformance hit.
+
+ASSERT_ALWAYS() is usually preferable to PANIC() because it is more compact.
+PANIC() has the advantage of being able to supply custom error information.  
+
+Assertion failures always generate a panic error
+
+### Error Output
+
+Both general and panic errors are reported on the stderr stream. 
+
+In most environments, these streams are routed to the same destination, i.e.
+the console, in which case overlapping stdout/stderr text can be a problem.
+To reduce the likelihood of this happening, stdout is flushed before generating
+error output and stderr is then flushed before handing back control (the latter
+operation is redundant on systems which have stderr unbuffered).
+
+Note: for performance reasons, we must avoid the temptation to disable buffering
+on stdout. 

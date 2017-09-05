@@ -1,0 +1,70 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Platform Module
+
+platform.h platform.cpp
+
+Note: this is a core module (see core documentation).
+
+All platform-specific code is contained within this module.
+
+### File Streams
+
+Custom wrappers are provided to present a consistent file stream interface to
+the rest of our code base. This is desirable because:
+
+    * Legacy libraries do not work reliably with the latest file systems.
+    * File sizes above 2GB are particularly problematic.
+    * Existing workarounds are not portabile. 
+
+See: FileOpen() FileClose() FileRead() FileWrite() FileSeek() FileTell() etc.
+
+### Fixed-Width Integer Types
+
+Portability of fixed-width integer types is sadly lacking across compilers and
+platforms, so we have defined our own types:
+
+Uint8 Uint16 Uint32 Uint64 Int8 Int16 Int32 Int64
+
+### 64-bit Macros
+
+Portability of 64-bit literals and formatters is sadly lacking across compilers
+and platforms, so we have defined our own macros:
+`
+U64(val):  Literal for unsigned value
+I64(val):  Literal for signed value
+
+F64d(mod): Formatter for Signed Decimal
+F64u(mod): Formatter for Unsigned Decimal
+F64x(mod): Format as Hex (lowercase)
+F64X(mod): Format as Hex (uppercase)
+`
+The optional 'mod' argument is used for inserting standard modifiers between
+the % and the type specifier in the output format string. 
+
+Examples:
+`
+    Int64 foo = I64(1234567);
+    
+    printf("foo = "   F64d()    "\n", foo);     // foo = 1234567
+    printf("foo = "   F64d(010) "\n", foo);     // foo = 0001234567
+    printf("foo = 0x" F64x()    "\n", foo);     // foo = 0x12d687
+    printf("foo = 0x" F64x(016) "\n", foo);     // foo = 0x000000000012d687
+    printf("foo = 0X" F64X(016) "\n", foo);     // foo = 0X000000000012D687
+`
+
+### Size Type
+
+The Size type is an alias for size_t, an unsigned integer whose width will
+depend on the target platform (32-bit or 64-bit). This is reflected in the
+SIZE_MIN AND SIZE_MAX macros. Formatting macros (FSu, FSd, FSx, FSX) are also
+required for portability. 
+
+### Timer Class
+
+Clocks and timers are also notorious for portability, so a simple Timer class
+is provided. While this class will provide a consistent interface for each
+platform, resolution will vary. The Read() method returns a `double` value
+indicating the elapsed time in seconds. Depending on the platform, the accuracy
+of this value can vary between nanoseconds and milliseconds.

@@ -1,0 +1,29 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Parse Module
+
+parse.h parse.cpp
+
+Note: this is a core module (see core documentation).
+
+### Basic Parse Functions
+
+The standard library functions, strtol() and family, have the following
+limitations:
+
+    * They do not automatically detect hex values and other symbols
+    * They are too forgiving, converting any old garbage to zero
+    * They only detect range errors (for the given type)
+
+The basic parse functions provided by this module require string pointer and
+value reference arguments. They return the following integer values:  
+
+    0:  String successfully converted to value
+    -1: String is badly formatted, value remains unchanged
+    +1: String is out of range, value remains unchanged
+
+### Advanced Parse Functions
+
+These functions use a Var& reference to implement more advanced parsing. As
+such, they return Pen type which gives more extensive error indication.

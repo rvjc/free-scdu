@@ -1,0 +1,12 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Match Module
+
+match.h match.cpp
+
+### Pattern Matching
+
+C lacks a good regex library. Fortunately, we have simple pattern matching needs
+which can be implemented super-efficiently without all of the regex overhead.
+Note the use of gotos in the isMatch() family of functions.
