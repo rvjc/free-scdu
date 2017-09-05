@@ -1,0 +1,6 @@
+Copyright 2015-2017 RVJ Callanan.
+Released under the GNU General Public License (Version 3).
+
+## Known Bugs
+
+There are no known bugs in the current release.
