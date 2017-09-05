@@ -1,0 +1,1 @@
+scdu show version
