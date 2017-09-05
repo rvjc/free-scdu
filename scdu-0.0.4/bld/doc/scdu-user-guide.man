@@ -154,7 +154,7 @@ SCDU is also a useful educational tool for exploring file formats and
 .PD
 data protocols.
 .PP
-SCDU is an acronym for "Shane Callanan\[aq]s Data Utility" while owing
+SCDU is an acronym for "Super\-Consolidated Data Utility" while owing
 .PD 0
 .P
 .PD

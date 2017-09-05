@@ -66,7 +66,7 @@ utilities and automation solutions
 SCDU is also a useful educational tool for exploring file formats and
 data protocols.
 
-SCDU is an acronym for "Shane Callanan's Data Utility" while owing
+SCDU is an acronym for "Super-Consolidated Data Utility" while owing
 its speedy character to the timeless expression "23 Skidoo".
 
 
