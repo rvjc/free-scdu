@@ -47,7 +47,7 @@ void help()
     outR("SCDU is also a useful educational tool for exploring file formats and");
     outR("data protocols.");
     outR();
-    outR("SCDU is an acronym for \"Shane Callanan's Data Utility\" while owing");
+    outR("SCDU is an acronym for \"Super-Consolidated Data Utility\" while owing");
     outR("its speedy character to the timeless expression \"23 Skidoo\".");
     outR();
     outR();
