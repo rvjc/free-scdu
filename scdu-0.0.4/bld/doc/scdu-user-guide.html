@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="RVJ Callanan">
+  <meta name="dcterms.date" content="2017-09-05">
+  <title>SCDU User Guide</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link href="data:text/css;charset=utf-8,%0A%0Abody%20%7B%0Amargin%3A%20auto%3B%0Apadding%2Dright%3A%201em%3B%0Apadding%2Dleft%3A%201em%3B%0Amax%2Dwidth%3A%2044em%3B%0Aborder%2Dleft%3A%201px%20dotted%20gray%3B%0Aborder%2Dright%3A%201px%20dotted%20gray%3B%0Acolor%3A%20black%3B%0Afont%2Dfamily%3A%20Verdana%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%20100%25%3B%0Aline%2Dheight%3A%20140%25%3B%0Acolor%3A%20%23333%3B%0A%7D%0Apre%20%7B%0Aborder%3A%201px%20dotted%20gray%3B%0Abackground%2Dcolor%3A%20%23ececec%3B%0Acolor%3A%20%231111111%3B%0Apadding%3A%200%2E5em%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20monospace%3B%0A%7D%0Ah1%20a%2C%20h2%20a%2C%20h3%20a%2C%20h4%20a%2C%20h5%20a%20%7B%0Atext%2Ddecoration%3A%20none%3B%0Acolor%3A%20%237a5ada%3B%0A%7D%0Ah1%2C%20h2%2C%20h3%2C%20h4%2C%20h5%20%7B%0Apadding%2Dtop%3A%201em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0Afont%2Dfamily%3A%20verdana%3B%0Afont%2Dweight%3A%20bold%3B%0Aborder%2Dbottom%3A%201px%20dotted%20black%3B%0Acolor%3A%20%237a5ada%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%20170%25%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%20125%25%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%20110%25%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%20100%25%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Ah1%2Etitle%20%7B%0Afont%2Dsize%3A%20200%25%3B%0Afont%2Dweight%3A%20bold%3B%0Apadding%2Dtop%3A%200%2E2em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0Atext%2Dalign%3A%20left%3B%0Aborder%3A%20none%3B%0A%7D%0Adt%20code%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Add%20p%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Atable%20%7B%0Aborder%3A%201px%20dotted%20gray%3B%0Abackground%2Dcolor%3A%20%23ececec%3B%0Afont%2Dfamily%3A%20monospace%3B%0A%7D%0Ath%20%7B%0Apadding%3A%200em%201em%3B%0A%7D%0Atd%20%7B%0Apadding%3A%200em%201em%3B%0A%7D" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">SCDU User Guide</h1>
+<h2 class="author">RVJ Callanan</h2>
+<h3 class="date">2017-09-05</h3>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#terms-of-use">Terms of Use</a></li>
+<li><a href="#contributors">Contributors</a></li>
+<li><a href="#scdu-help">SCDU Help</a><ul>
+<li><a href="#general-usage">General Usage</a></li>
+<li><a href="#actions">Actions</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#option-types">Option Types</a></li>
+<li><a href="#option-syntax">Option Syntax</a></li>
+<li><a href="#options-index">Options Index</a></li>
+<li><a href="#channels">Channels</a></li>
+<li><a href="#command-line-examples">Command Line Examples</a></li>
+<li><a href="#sample-config-file">Sample Config File</a></li>
+</ul></li>
+<li><a href="#scdu.cfg-by-joe-bloggs">scdu.cfg by Joe Bloggs</a></li>
+<li><a href="#global-options">global options</a></li>
+<li><a href="#action-specific-options">action-specific options</a></li>
+<li><a href="#end-of-file">end-of-file</a><ul>
+<li><a href="#signals">Signals</a></li>
+<li><a href="#exit-codes">Exit Codes</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="terms-of-use">Terms of Use</h1>
+<p>Copyright (C) 2015-2017 RVJ Callanan</p>
+<p>SCDU is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+<p>SCDU is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with SCDU. If not, see <a href="http://www.gnu.org/licenses/" class="uri">http://www.gnu.org/licenses/</a>.</p>
+<h1 id="contributors">Contributors</h1>
+<p>The SCDU Project recognises the contributions of the following individuals in the key areas of design, management, coding, testing, documentation and support:</p>
+<ul>
+<li>Shane Callanan, Carlow Institute of Technology</li>
+<li>Dennis Callanan, Maynooth University</li>
+<li>David Callanan, Gaelcholaiste Ceatharlach</li>
+</ul>
+<p>Acknowledgements================</p>
+<p>The SCDU Project acknowledges the following organisations andindividuals whose tools, frameworks and wider contributions havehelped bring our work to fruition:</p>
+<ul>
+<li>Free Software Foundation GNU Project Pandoc (John McFarlane) Skidoo</li>
+</ul>
+<h1 id="scdu-help">SCDU Help</h1>
+<p>SCDU (pronounced &quot;skidoo&quot;) is a versatile command-line toolkit for analysing, generating and manipulating data.</p>
+<p>SCDU is freely distributed as a series of stand-alone executables supporting a wide range of operating systems and CPU architectures. No installers are required; just copy the appropriate executable to a binary directory on the host or run directly from an external device such as a USB stick.</p>
+<p>SCDU is designed from the ground up to pack as much functionality as possible into a compact binary with no external dependencies beyond a basic OS stack. This means that it is equally at home in embedded devices, boot disks, virtual machines and high-end server clusters.</p>
+<p>SCDU is a veritable &quot;Swiss Army Knife&quot; for programmers, sysadmins and data forensics experts in the varied landscape of the Internet Age. It's terse, platform-agnostic and script-friendly interface maximises productivity without compromising performance and reliability. These attributes also make SCDU the engine-of-choice for higher level data utilities and automation solutions</p>
+<p>SCDU is also a useful educational tool for exploring file formats and data protocols.</p>
+<p>SCDU is an acronym for &quot;Shane Callanan's Data Utility&quot; while owing its speedy character to the timeless expression &quot;23 Skidoo&quot;.</p>
+<h2 id="general-usage">General Usage</h2>
+<p>scdu [?] [action] [options] [parameters]</p>
+<p>Inserting a '?' before any other argument invokes a &quot;dummy run&quot; which recaps all options, environment variables and parameters that would have applied if the action had been executed.</p>
+<p>If no arguments are supplied, the help action is invoked.</p>
+<h2 id="actions">Actions</h2>
+<p>scdu [?] copy <a href="#options">options</a> <source> <destination> copies source files or directories to destination</p>
+<p>scdu [?] help [options] [ <action> ] provides general or specific help</p>
+<p>scdu [?] info <a href="#options">options</a> <source> provides useful information about the source</p>
+<p>scdu [?] show <a href="#options">options</a> acks | authors | contribs | copyright | terms | version outputs program information</p>
+<p>scdu [?] view <a href="#options">options</a> <source> displays source in human-readable format</p>
+<h2 id="options">Options</h2>
+<p>Options have consistent built-in defaults which may be over-ridden via the command-line and/or config file (see -cf option).</p>
+<p>While both methods employ the same syntax, config file options are specified on separate lines which may also include comments and action declarations. The intention is that built-in defaults can be over-ridden in the &quot;global&quot; section at the top of the config file and further customised in the action-specific sections or on the command-line itself.</p>
+<p>Options are processed in the following order:</p>
+<ol type="1">
+<li>Options specified on the command-line BEFORE the -cf option.</li>
+<li>Options specified in the config file global section.</li>
+<li>Options specified in the config file action-specific section.</li>
+<li>Options specified on the command-line AFTER the -cf option.</li>
+</ol>
+<h2 id="option-types">Option Types</h2>
+<p>Options can have one of the following types:</p>
+<p>flag : 1 = enabled; 0 = disabled text : text string of arbitrary length inum : integer number of arbitrary size fnum : floating-point number of arbitrary size and precision pick : selections using wildcards and/or letter combinations</p>
+<h2 id="option-syntax">Option Syntax</h2>
+<p>Options can be specified using three methods:</p>
+<p>long: --<name>[=<value>] e.g. --progress-width=120 --recurse short: -<symbol>[=<value>] e.g. -pw=120 -r group: [+|~]<symbols> e.g. +rfap</p>
+<p>Long syntax requires descriptive option names which are preferred in config files.</p>
+<p>Short and group syntax requires abbreviated option symbols which are more suited to the command-line where space is at a premium.</p>
+<p>Group syntax can only be used with SINGLE character symbols which are reserved for the most ubiquituous FLAG options. The group prefix determines whether the specified flags are enabled(+) or disabled(~).</p>
+<p>Flag options are disabled by default and can be enabled by specifying the option name or symbol without a value. Explicit values are only required when DISABLING a flag; however, explicit enabling may also be used to add emphasis if a flag was previously disabled.</p>
+<p>Null values are assigned by appending the &quot;=&quot; sign to the option name or symbol without a value e.g. -rd=.</p>
+<p>Text values can be assigned with or without quotes. Quotes are only required when the text contains spaces e.g. -lf=&quot;my log file&quot;.</p>
+<p>Config files support the following additional declarations:</p>
+<p>@<action> start of action-specific section # comment</p>
+<p>Leading whitespace is ignored in config files, so indents may be used freely to assist readability.</p>
+<h2 id="options-index">Options Index</h2>
+<p>Option: -a --all<br />
+Type: <flag> Default: <disabled> Description: general-purpose flag e.g. process all files</p>
+<p>Option: -f --force<br />
+Type: <flag> Default: <disabled> Description: general purpose flag e.g. force over-writing</p>
+<p>Option: -p --preserve<br />
+Type: <flag> Default: <disabled> Description: general purpose flag e.g. preserve attributes</p>
+<p>Option: -r --recurse<br />
+Type: <flag> Default: <disabled> Description: general purpose flag e.g. include sub-directories</p>
+<p>Option: -ap --ascii-path<br />
+Type: <flag> Default: <disabled> Description: for generic paths, use ascii instead of utf-8 encoding</p>
+<p>Option: -at --ascii-text<br />
+Type: <flag> Default: <disabled> Description: for generic text, use ascii instead of utf-8 encoding</p>
+<p>Option: -bp --binary-prefix<br />
+Type: <flag> Default: <disabled> Description: for generic quantities, use Ki(1024) instead of k(1000)</p>
+<p>Option: -bs --buffer-size<br />
+Type: <inum> = [1 to 10Mi] Default: 1Ki Description: file buffer size, memory permitting (see -cs option)</p>
+<p>Option: -cf --config-file<br />
+Type: <text> (optional) Default: <null> Description: alternative means of specifying command-line options</p>
+<p>Option: -cs --chunk-size<br />
+Type: <inum> = [512 to 10Mi] or [0] Default: 0 Description: LCM of page sizes of accessible file systems (0 = auto)</p>
+<p>Option: -fd --flush-delay<br />
+Type: <inum> = [1 to 100] Default: 50 Description: minimum catch-up time for slow stream flush</p>
+<p>Option: -ff --flush-factor<br />
+Type: <inum> = [1 to 1000] Default: 10 Description: additional catch-up time for slow stream flush</p>
+<p>Option: -fl --flush-limit<br />
+Type: <inum> = [100 to 10000] Default: 1000 Description: maximum catch-up time for slow stream flush</p>
+<p>Option: -fst --fast-streams<br />
+Type: <pick> any or none from [sdl] Default: <null> Description: streams which do not require catch-up time after flush</p>
+<p>Option: -lf --log-file<br />
+Type: <text> (required) Default: scdu.log Description: destination of logged channels (see -rl and -lm options)</p>
+<p>Option: -lm --log-mode<br />
+Type: <pick> at most 1 selection from [AO] Default: <null> Description: <null> = disabled; A = append; O = overwrite;</p>
+<p>Option: -ns --newline-std<br />
+Type: <pick> 1 selection from [DWN] Default: D Description: Default; Windows(CRLF); Nix(LF)</p>
+<p>Option: -nd --newline-dgn<br />
+Type: <pick> 1 selection from [DWN] Default: D Description: Default; Windows(CRLF); Nix(LF)</p>
+<p>Option: -nl --newline-log<br />
+Type: <pick> 1 selection from [DWN] Default: D Description: Default; Windows(CRLF); Nix(LF)</p>
+<p>Option: -pf --progress-feed<br />
+Type: <pick> any or none from [IUF] Default: IF Description: <null> = never; Interrupts; Updates; Final</p>
+<p>Option: -pr --progress-rate<br />
+Type: <fnum> = [0.1 to 300.0] Default: 0.25 Description: minimum time between progress updates</p>
+<p>Option: -ps --progress-stats<br />
+Type: <pick> any or none from [PTURHIS] Default: PHIS Description: Percent; Time; Units; Rate; Hits; Item; Snip</p>
+<p>Option: -pw --progress-width<br />
+Type: <inum> = [40 to 240] Default: 80 Description: truncation width of progress updates</p>
+<p>Option: -rs --route-std<br />
+Type: <pick> any or none from [CSARPIWEVDT] Default: R Description: channels routed to standard output (stdout)</p>
+<p>Option: -rd --route-dgn<br />
+Type: <pick> any or none from [CSARPIWEVDT] Default: *-R Description: channels routed to diagnostic output (stderr)</p>
+<p>Option: -rl --route-log<br />
+Type: <pick> any or none from [CSARPIWEVDT] Default: *-R Description: channels routed to log output (see -lf and -lm options)</p>
+<p>Option: -rm --rate-metric<br />
+Type: <pick> 1 selection from [SMH] Default: M Description: generic rate output: per Second; Minute; Hour</p>
+<p>Option: -rr --raw-reporting<br />
+Type: <flag> Default: <disabled> Description: show bare data in results and summary output</p>
+<p>Option: -ss --summary-stats<br />
+Type: <pick> any or none from [AD] Default: <null> Description: Allocs; Duration;</p>
+<p>Option: -wd --work-directory<br />
+Type: <text> (optional) Default: <null> Description: alternative working directory to calling process</p>
+<h2 id="channels">Channels</h2>
+<p>Program output is routed via channels which are selected using simple letter designations:</p>
+<p>C : command : for generating program preamble and postable S : summary : for summarising program execution stats A : action : for indicating that the current action has started R : result : for generating action results P : progress : for tracking potentially long-running actions I : info : for logging info W : warning : for logging warnings E : error : for logging errors V : verbose : for logging extra info that is occasionally useful D : debug : for logging extra info to assist debugging T : test : for logging temporary info during testing</p>
+<p>Channel routing to output streams is controlled using the following options: -rs -rd -rl.</p>
+<p>Note: it is possible to route a given channel to more than one output stream simultaneously.</p>
+<h2 id="command-line-examples">Command Line Examples</h2>
+<p>scdu copy -cf=scdu.cfg -bs=100 myfile.dat mycopy.dat scdu help show scdu info -rs=R -rd= 192.168.1.1 scdu show version scdu view myfile.dat</p>
+<h2 id="sample-config-file">Sample Config File</h2>
+<h1 id="scdu.cfg-by-joe-bloggs">scdu.cfg by Joe Bloggs</h1>
+<h1 id="global-options">global options</h1>
+<pre><code>--work-directory=~/scdu
+--log-file=default.log
+--log-mode=A
+
+--progress-width=120
+--progress-stats=*
+--progress-rate=1.0
+
+--ascii-path
+--chunk-size=1Mi
+--buffer-size=1</code></pre>
+<h1 id="action-specific-options">action-specific options</h1>
+<p><span class="citation" data-cites="copy">@copy</span></p>
+<pre><code># keep separate log and over-write
+
+--log-file=copy.log
+--log-mode=O
+
+--buffer-size=10
+--rate-metric=S
+--progress-rate=0.5
+--summary-stats=D</code></pre>
+<p><span class="citation" data-cites="help">@help</span></p>
+<pre><code># just show help output and nothing else
+
+--route-dgn=
+--route-log=</code></pre>
+<h1 id="end-of-file">end-of-file</h1>
+<h2 id="signals">Signals</h2>
+<p>2 SIGINT : user interrupt (ctrl C)</p>
+<h2 id="exit-codes">Exit Codes</h2>
+<p>0 XE_OK : success 65 XE_UNKNOWN : unknown error 66 XE_ABTERM : abnormal termination 67 XE_UNKSIG : unknown signal 68 XE_USRINT : user interrupt 69 XE_MEMOUT : out of memory 70 XE_STREAM : stream error 71 XE_CMD : invalid command 72 XE_CMDPRM : invalid command parameter</p>
+<p>Positive exit codes from 1 to 63 are reserved for OS errors.</p>
+<p>Negative exit codes usually indicate an abnormal termination or bug.</p>
+<p>Please report suspected bugs to: GITHUB. A verbose log will assist debugging!</p>
+</body>
+</html>
